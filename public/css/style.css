@@ -9527,7 +9527,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: none;
 }
 
-#header-carousel img {
+#header-carousel .carousel-inner .carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;

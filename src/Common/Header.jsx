@@ -43,10 +43,9 @@ function Navbar() {
                             </button>
                             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                 <div className="navbar-nav mr-auto py-0">
-                                    {/* <a href="index.html" className="nav-item nav-link active">Home</a> */}
                                     <NavLink className="nav-item nav-link" to='/' activeClassName="active">Home</NavLink>
-                                    <NavLink className="nav-item nav-link" to='/shop' activeClassName="active">Shop</NavLink>
-                                    <a href="detail.html" className="nav-item nav-link">Shop Detail</a>
+                                    <NavLink className="nav-item nav-link" to='/products' activeClassName="active">Products</NavLink>
+                                    <NavLink className="nav-item nav-link" to="/details">Products Detail</NavLink>
                                     <div className="nav-item dropdown">
                                         <a href="//" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i className="fa fa-angle-down mt-1"></i></a>
                                         <div className="dropdown-menu bg-primary rounded-0 border-0 m-0">
@@ -54,18 +53,21 @@ function Navbar() {
                                             <a href="checkout.html" className="dropdown-item">Checkout</a>
                                         </div>
                                     </div>
-                                    <a href="contact.html" className="nav-item nav-link">Contact</a>
+                                    <NavLink className="nav-item nav-link" to='/contact'>Contact</NavLink>
                                 </div>
-                                <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
-                                    <a href="//" className="btn px-0">
-                                        <i className="fas fa-heart text-primary"></i>
-                                        <span className="badge text-secondary border border-secondary rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
-                                    </a>
-                                    <a href="//" className="btn px-0 ml-3">
-                                        <i className="fas fa-shopping-cart text-primary"></i>
-                                        <span className="badge text-secondary border border-secondary rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
-                                    </a>
-                                </div>
+
+                            </div>
+                            <div className="col-lg-4 col-6 text-left">
+                                <form action="">
+                                    <div className="input-group">
+                                        <input type="text" className="form-control" placeholder="Search for products" />
+                                        <div className="input-group-append">
+                                            <span className="input-group-text bg-transparent text-primary">
+                                                <i className="fa fa-search"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </nav>
                     </div>
