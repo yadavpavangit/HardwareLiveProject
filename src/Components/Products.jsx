@@ -31,33 +31,46 @@ function ProductsBread() {
     );
 }
 
-function HWProducts(props) {
+function HWProducts({ productData }) {
     return (
-        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <NavLink className="nav-item nav-link" to={props.link}>
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src={props.images} alt="" />
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/#">{props.name}</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>{props.realprice}</h5>
-                            <h6 class="text-muted ml-2"><del>{props.prevprice}</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </NavLink>
-                <a class="btn btn-outline-danger px-4 mb-3 animate__animated animate__fadeInUp" href={props.shopLink}>Shop Now</a>
-            </div>
-        </div>
+        <>
+            {
+                productData.map((items, i) => {
+                    return (
+                        <>
+                            <div class="col-lg-3 col-md-6 col-sm-6 pb-1" key={i}>
+                                <div class="product-item bg-light mb-4">
+                                    <NavLink className="nav-item nav-link" to={items.link}>
+                                        <div class="product-img position-relative overflow-hidden">
+                                            <img class="img-fluid w-100" src={items.images} alt="" />
+                                        </div>
+                                        <div class="text-center py-4">
+                                            <a class="h6 text-decoration-none text-truncate" href="/#">{items.name}</a>
+                                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                                <h5>{items.OrigiProce}</h5>
+                                                <h6 class="text-muted ml-2"><del>{items.discPrice}</del></h6>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center mb-1">
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small class="fa fa-star text-primary mr-1"></small>
+                                                <small>(99)</small>
+                                            </div>
+                                        </div>
+                                    </NavLink>
+                                    <a class="btn btn-outline-danger px-4 mb-3 animate__animated animate__fadeInUp" href={items.shopLink}>Shop Now</a>
+
+
+
+                                </div>
+                            </div>
+                        </>
+                    );
+                })
+            }
+        </>
     );
 }
 
