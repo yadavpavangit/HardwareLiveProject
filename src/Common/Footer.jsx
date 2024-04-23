@@ -60,7 +60,7 @@ function Footer() {
                             &copy; <span className="text-primary">Domain</span>. All Rights Reserved. Designed
                             by
                             <NavLink className="text-primary" to="https://www.amazon.in/s?k=eonic&crid=R0SR2UQOEX7Y"> Pava</NavLink>
-                            <br />Distributed By: <NavLink href="https://www.amazon.in/s?k=eonic&crid=R0SR2UQOEX7Y" rel="noopener">Eonic</NavLink>
+                            <br />Distributed By: <NavLink to="https://www.amazon.in/s?k=eonic&crid=R0SR2UQOEX7Y" rel="noopener">Eonic</NavLink>
                         </p>
                     </div>
                     <div className="col-md-6 px-xl-0 text-center text-md-right">
@@ -69,7 +69,7 @@ function Footer() {
                 </div>
             </div>
 
-            <NavLink href="/#" className="btn btn-primary back-to-top"><i className="fa fa-angle-double-up"></i></NavLink>
+            <NavLink to="/#" className="btn btn-primary back-to-top"><i className="fa fa-angle-double-up"></i></NavLink>
         </>
     );
 }

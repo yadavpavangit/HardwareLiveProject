@@ -41,7 +41,7 @@ function HWStndLssItems(props) {
                             <img className="img-fluid w-100" src={props.image} alt="" />
                         </div>
                         <div className="text-center py-4">
-                            <a className="h6 text-decoration-none text-truncate" href="//">{props.name}</a>
+                            <NavLink className="h6 text-decoration-none text-truncate" to="">{props.name}</NavLink>
                             <div className="d-flex align-items-center justify-content-center mt-2">
                                 <h5>{props.discPrice}</h5><h6 className="text-muted ml-2"><del> {props.price} </del></h6>
                             </div>

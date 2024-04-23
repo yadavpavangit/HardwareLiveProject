@@ -1,26 +1,31 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomeTopBar, { HomeAbout, HomeBrands, HomeCarousel, HomeCate, HomeFeatPro, HomeFooter, HomeHeader, HomeOffer } from './Components/Home';
 import ProductsTopbar, { HWProducts, ProductsBread, ProductsFooter, ProductsHeader } from './Components/Products';
 import HWStndLssTop, { HWStndLssIBread, HWStndLssItems, HWStndLssNavbar, } from './Components/HWStndLss';
 import HoldersTop, { HoldersNavbar, HoldersProducts } from './Components/Holders';
-// import ProDetailsTopbar, { ProDetailsBreadcrumb, ProDetailsDescrib, ProDetailsFooter, ProDetailsNavabar } from './Components/ProdutsDetails';
+import ProDetailsTopbar, { ProDetailsBreadcrumb, ProDetailsDescrib, ProDetailsFooter, ProDetailsNavabar } from './Components/ProdutsDetails';
 import ContactTopbar, { ContactBread, ContactFormMap, ContactNavbar } from './Components/Contact';
 import AboutNavbar, { HWAbout, AboutBread, AboutFooter, AboutIcons, AboutProd, AboutShipping, AboutShippingSummary } from './Components/About';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/about' element={<About />} />
-                    <Route path='/products' element={<Products />} />
-                    <Route path='/holders' element={<Holders />} />
-                    <Route path='/stainless' element={<StainlessItems />} />
-                    <Route path='/contact' element={<Contact />} />
-                </Routes>
-            </BrowserRouter>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/about' element={<About />} />
+                        <Route path='/products' element={<Products />} />
+                        <Route path='/holders' element={<Holders />} />
+                        <Route path='/stainless' element={<StainlessItems />} />
+                        <Route path='/contact' element={<Contact />} />
+                        <Route path='/productDetailes' element={<ProductDetailes />} />
+                    </Routes>
+                </BrowserRouter>
+            </Provider>
 
         </div>
     );
@@ -64,9 +69,9 @@ function HomeFeaturesProd() {
             <div className="container-fluid pt-5 pb-3">
                 <h2 className="section-title position-relative text-uppercase mx-xl-5 mb-4"><span className="bg-secondary pr-3">Featured Products</span></h2>
                 <div className="row px-xl-5">
-                    <HomeFeatPro link="/holders" images="img/wn4ftxtp.png" name="handle" disPrice='₹760' realPrice='₹1020'  />
-                    <HomeFeatPro link="/holders" images="img/37j3fnys.png" name="handle" disPrice='₹860' realPrice='₹950'  />
-                    <HomeFeatPro link="/stainless" images="img/stnlss_tp.jpg" name="Paper Holder" disPrice='₹980' realPrice='₹1050'  />
+                    <HomeFeatPro link="/holders" images="img/wn4ftxtp.png" name="handle" disPrice='₹760' realPrice='₹1020' />
+                    <HomeFeatPro link="/holders" images="img/37j3fnys.png" name="handle" disPrice='₹860' realPrice='₹950' />
+                    <HomeFeatPro link="/stainless" images="img/stnlss_tp.jpg" name="Paper Holder" disPrice='₹980' realPrice='₹1050' />
                 </div>
             </div>
         </>
@@ -74,7 +79,7 @@ function HomeFeaturesProd() {
 }
 
 function About() {
-    return(
+    return (
         <>
             <AboutNavbar />
             <HWAbout />
@@ -102,6 +107,7 @@ function Products() {
 
 let productData = [
     {
+        id: 1,
         link: "/holders",
         images: "img/odbktgp9.jpg",
         name: "Bath Holder",
@@ -110,6 +116,7 @@ let productData = [
         shopLink: "https://www.amazon.in/eonic-Multipurpose-Unbreakable-Toothbrush-Accessories/dp/B0C18XDBVY",
     },
     {
+        id: 2,
         link: "/holders",
         images: "img/wn4ftxtp.png",
         name: "Bath Holder1",
@@ -118,6 +125,7 @@ let productData = [
         shopLink: "https://www.amazon.in/eonic-Multipurpose-Unbreakable-Soap-Holder/dp/B0C2TQWB2G",
     },
     {
+        id: 3,
         link: "/holders",
         images: "img/37j3fnys.png",
         name: "Bath Holder2",
@@ -126,6 +134,7 @@ let productData = [
         shopLink: "https://www.amazon.in/eonic-Stainless-Multipurpose-Bathroom-Toothbrush/dp/B0BZP9TM5F",
     },
     {
+        id: 4,
         link: "/stainless",
         images: "img/stnlss_tp.jpg",
         name: "Paper Holder",
@@ -134,6 +143,7 @@ let productData = [
         shopLink: "https://www.amazon.in/eonic-Stainless-Paper-Holder-Accessories/dp/B0C62CPKQS",
     },
     {
+        id: 5,
         link: "/stainless",
         images: "img/odbktgp9.jpg",
         name: "Paper Holder1",
@@ -146,23 +156,23 @@ let productData = [
 function ProductItems() {
     return (
         <>
-            <div class="container-fluid">
-                <div class="row px-xl-5">
-                    <div class="col-lg-12 col-md-8">
-                        <div class="row pb-3">
-                            
-                            <HWProducts productData = {productData} />
+            <div className="container-fluid">
+                <div className="row px-xl-5">
+                    <div className="col-lg-12 col-md-8">
+                        <div className="row pb-3">
 
-                            <div class="col-12">
+                            <HWProducts productData={productData} />
+
+                            <div className="col-12">
                                 <nav>
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item disabled">
-                                            <a class="page-link" href="/#"><span>Previous</span></a>
+                                    <ul className="pagination justify-content-center">
+                                        <li className="page-item disabled">
+                                            <NavLink className="page-link" to="/#"><span>Previous</span></NavLink>
                                         </li>
-                                        <li class="page-item active"><a class="page-link" href="/#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="/#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="/#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="/#">Next</a></li>
+                                        <li className="page-item active"><NavLink className="page-link" to="/#">1</NavLink></li>
+                                        <li className="page-item"><NavLink className="page-link" to="/#">2</NavLink></li>
+                                        <li className="page-item"><NavLink className="page-link" to="/#">3</NavLink></li>
+                                        <li className="page-item"><NavLink className="page-link" to="/#">Next</NavLink></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -209,17 +219,17 @@ function HWStndLssProducts() {
     );
 }
 
-// function ProductDetainls() {
-//     return (
-//         <>
-//             <ProDetailsTopbar />
-//             <ProDetailsNavabar />
-//             <ProDetailsBreadcrumb />
-//             <ProDetailsDescrib />
-//             <ProDetailsFooter />
-//         </>
-//     );
-// }
+function ProductDetailes() {
+    return (
+        <>
+            <ProDetailsTopbar />
+            <ProDetailsNavabar />
+            <ProDetailsBreadcrumb />
+            <ProDetailsDescrib />
+            <ProDetailsFooter />
+        </>
+    );
+}
 
 function Contact() {
     return (

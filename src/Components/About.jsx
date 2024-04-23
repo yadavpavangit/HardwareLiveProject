@@ -83,9 +83,9 @@ function AboutIcons() {
 function AboutShipping() {
     return (
         <>
-            <div class="container-fluid mb-3">
-                <div class="row px-xl-5">
-                    <div class="col-lg-12">
+            <div className="container-fluid mb-3">
+                <div className="row px-xl-5">
+                    <div className="col-lg-12">
                         <div className="carousel-item position-relative active">
                             <img className="position-absulte" src="img/trans.jpg" alt="" style={{ height: "530px", width: "100%" }} />
                         </div>
@@ -116,21 +116,21 @@ function AboutProd() {
     return (
         <>
             <div className="container-fluid">
-                <div class="row px-xl-5">
-                    <div class="col-lg-12 col-md-8">
+                <div className="row px-xl-5">
+                    <div className="col-lg-12 col-md-8">
                         <hr />
-                        <div class="row pb-3">
-                            <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div className="row pb-3">
+                            <div className="col-lg-4 col-md-6 col-sm-6 pb-1">
                                 <div className="carousel-item position-relative active">
                                     <img className="position-absulte" src="img/bath.jpeg" alt="" style={{ marginTop: "30px", }} />
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                            <div className="col-lg-4 col-md-6 col-sm-6 pb-1">
                                 <div className="carousel-item position-relative active">
                                     <img className="position-absulte" src="img/bath1.jpeg" alt="" style={{ marginTop: "30px", }} />
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                            <div className="col-lg-4 col-md-6 col-sm-6 pb-1">
                                 <div className="carousel-item position-relative active">
                                     <img className="position-absulte" src="img/bath2.jpeg" alt="" style={{ marginTop: "30px", }} />
                                 </div>

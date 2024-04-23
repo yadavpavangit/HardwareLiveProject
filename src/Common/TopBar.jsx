@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function TopBar() {
     return (
         <>
@@ -14,23 +16,23 @@ function TopBar() {
                             </div>
                         </div> */}
                         <div className="d-inline-flex align-items-center d-block d-lg-none">
-                            <a href="//" className="btn px-0 ml-2">
+                            <NavLink to="" className="btn px-0 ml-2">
                                 <i className="fas fa-heart text-dark"></i>
-                                <span className="badge text-dark border border-dark rounded-circle" style= {{paddingBottom:"2px;"}}>0</span>
-                            </a>
-                            <a href="//" className="btn px-0 ml-2">
+                                <span className="badge text-dark border border-dark rounded-circle" style= {{paddingBottom:"2px"}}>0</span>
+                            </NavLink>
+                            <NavLink to="" className="btn px-0 ml-2">
                                 <i className="fas fa-shopping-cart text-dark"></i>
-                                <span className="badge text-dark border border-dark rounded-circle" style={{paddingBottom:"2px;"}}>0</span>
-                            </a>
+                                <span className="badge text-dark border border-dark rounded-circle" style={{paddingBottom:"2px"}}>0</span>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
                 <div className="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
                     <div className="col-6 text-left">
-                        <a href="//" className="text-decoration-none">
+                        <NavLink to="" className="text-decoration-none">
                             <span className="h1 text-uppercase text-light bg-dark px-2">Eonic</span>
                             <span className="h1 text-uppercase text-dark bg-primary px-2 ml-n1">India</span>
-                        </a>
+                        </NavLink>
                     </div>
                     
                     <div className="col-6 text-right">
