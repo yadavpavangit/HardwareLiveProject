@@ -1,12 +1,16 @@
 import React from 'react'
 import Footer from '../Common/Footer';
 import { NavLink } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import Navbar from '../Common/Header';
+import TopBar from '../Common/TopBar';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function AboutNavbar() {
-    return(
-        <Navbar />
+    return (
+        <>
+            <TopBar />
+            <Navbar />
+        </>
     );
 }
 
@@ -26,20 +30,20 @@ function HWAbout() {
 
 function AboutBread() {
     return (
-      <>
-        <div className="container-fluid">
-          <div className="row px-xl-5">
-            <div className="col-12">
-              <nav className="breadcrumb bg-light mb-30">
-                <NavLink className="breadcrumb-item text-dark" to="/">Home</NavLink>
-                <span className="breadcrumb-item active">About</span>
-              </nav>
+        <>
+            <div className="container-fluid">
+                <div className="row px-xl-5">
+                    <div className="col-12">
+                        <nav className="breadcrumb bg-light mb-30">
+                            <NavLink className="breadcrumb-item text-dark" to="/">Home</NavLink>
+                            <span className="breadcrumb-item active">About</span>
+                        </nav>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </>
+        </>
     );
-  }
+}
 
 function AboutIcons() {
     return (
@@ -96,14 +100,14 @@ function AboutShippingSummary() {
     return (
         <>
 
-            <p className='container-fluid' style={{ fontFamily: "sans-serif", fontWeight: "500" }}>"Eonic's" is a leading hardware shop that operates exclusively through its comprehensive website, catering to the needs of DIY enthusiasts, homeowners, contractors, and businesses alike. This innovative online platform offers a vast array of hardware products, ranging from power tools and electrical supplies to plumbing fixtures and building materials. The company prioritizes customer satisfaction and strives to ensure timely delivery of orders, with efficient logistics and reliable shipping partners. 
-                
+            <p className='container-fluid' style={{ fontFamily: "sans-serif", fontWeight: "500" }}>"Eonic's" is a leading hardware shop that operates exclusively through its comprehensive website, catering to the needs of DIY enthusiasts, homeowners, contractors, and businesses alike. This innovative online platform offers a vast array of hardware products, ranging from power tools and electrical supplies to plumbing fixtures and building materials. The company prioritizes customer satisfaction and strives to ensure timely delivery of orders, with efficient logistics and reliable shipping partners.
+
                 Additionally, customers can track their orders in real-time through the website, providing peace of mind and transparency throughout the shipping process.
 
                 <span>"Eonic's" commitment to excellence extends beyond its product offerings and shipping services. The website also provides valuable resources such as how-to guides, project ideas, and expert advice to assist customers in their DIY endeavors and home improvement projects.</span><br />
 
                 <br />Overall, "Eonic's" stands out as a premier destination for all hardware needs, offering convenience, quality products, and exceptional service through its user-friendly website and efficient shipping solutions. Whether you're tackling a weekend DIY project or managing a large-scale construction venture, "Eonic's" is your one-stop shop for all things hardware-related
-                </p>
+            </p>
         </>
     );
 }
@@ -139,7 +143,7 @@ function AboutProd() {
                     At Quality Hardware Emporium, every item in stock undergoes rigorous quality checks to ensure it meets the highest standards. Whether you're a professional contractor, a dedicated DIY enthusiast, or a homeowner in need of reliable tools and materials, you can trust that the products available at Quality Hardware Emporium are built to last and perform reliably. <br />
 
                     <br />What sets Quality Hardware Emporium apart is its unwavering commitment to customer satisfaction. The knowledgeable staff members are always on hand to assist customers in finding the perfect products for their specific needs, offering expert advice and guidance every step of the way. Additionally, the shop prioritizes transparency and integrity, ensuring that customers can shop with confidence, knowing they're getting quality products at fair prices.
-                    
+
                     From heavy-duty power tools to precision hand tools, from durable building materials to innovative home improvement solutions, Quality Hardware Emporium has everything you need to tackle any project with confidence. With a reputation for excellence and a dedication to quality, it's no wonder that customers trust Quality Hardware Emporium for all their hardware needs.</p>
             </div>
         </>
